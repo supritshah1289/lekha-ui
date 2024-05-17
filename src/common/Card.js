@@ -85,14 +85,17 @@ const ItemCard = ({ item, isDelete }) => {
         />
         <CardMedia
           component="img"
-          height="194"
-          weidth="194"
           image={
             item.uploads.length > 0
               ? `data:image/jpeg;base64,${item.uploads[0].image}`
               : ""
           }
           alt="test"
+          sx={{
+            objectFit: "cover",
+            aspectRatio: "1",
+            width: "100%",
+          }}
         />
         <CardContent>
           <Typography variant="body2">{item.description}</Typography>
